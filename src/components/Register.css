@@ -1,0 +1,221 @@
+.register-container {
+  background: linear-gradient(135deg, #f6f4f4 25%, #f4f1f1 50%, #fff7f7 75%);
+  background-size: 200% 200%;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: backgroundMove 3s infinite alternate, fadeIn 0.5s;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px black;
+}
+
+.register-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #000000;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container form div {
+  margin-bottom: 20px;
+}
+
+.register-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #0a0909;
+}
+
+.register-container input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  border: 1px solid #f3c3c3;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.register-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.register-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative; /* Cần thiết để đặt hiệu ứng lấp lánh */
+  overflow: hidden; /* Cần thiết để ẩn phần thừa của hiệu ứng */
+}
+
+.register-container button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+.register-container button:hover .button-sparkle {
+  display: block;
+}
+
+.register-container button .button-sparkle {
+  display: none;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: buttonSparkle 1.5s infinite linear;
+}
+
+.register-container button .button-sparkle:nth-child(1) {
+  top: 10px;
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.register-container button .button-sparkle:nth-child(2) {
+  top: 20px;
+  left: 30px;
+  animation-delay: 0.5s;
+}
+
+.register-container button .button-sparkle:nth-child(3) {
+  bottom: 10px;
+  right: 10px;
+  animation-delay: 1s;
+}
+
+.register-container button .button-sparkle:nth-child(4) {
+  bottom: 20px;
+  right: 30px;
+  animation-delay: 1.5s;
+}
+
+.register-container button .button-sparkle:nth-child(5) {
+  top: 10px;
+  right: 10px;
+  animation-delay: 2s;
+}
+
+.register-container button .button-sparkle:nth-child(6) {
+  top: 20px;
+  right: 30px;
+  animation-delay: 2.5s;
+}
+
+.register-container button .button-sparkle:nth-child(7) {
+  bottom: 10px;
+  left: 10px;
+  animation-delay: 3s;
+}
+
+.register-container button .button-sparkle:nth-child(8) {
+  bottom: 20px;
+  left: 30px;
+  animation-delay: 3.5s;
+}
+
+.register-container p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ff0000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Hiệu ứng lấp lánh */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100px) translateY(-100px) rotate(360deg);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: sparkle 3s infinite linear;
+}
+
+.sparkle:nth-child(1) {
+  top: -50px;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  top: 20%;
+  left: 90%;
+  animation-delay: 1s;
+}
+
+.sparkle:nth-child(3) {
+  top: 60%;
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.sparkle:nth-child(4) {
+  top: 90%;
+  left: -30px;
+  animation-delay: 3s;
+}
+
+.sparkle:nth-child(5) {
+  top: -30px;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+/* Hiệu ứng lấp lánh cho nút */
+@keyframes buttonSparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

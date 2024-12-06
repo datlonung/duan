@@ -1,0 +1,124 @@
+.manage-products-container {
+  background-color: #fff; /* Màu nền trắng */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 50px auto; /* Căn giữa theo chiều ngang và khoảng cách trên dưới */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  animation: fadeIn 0.5s; /* Hiệu ứng xuất hiện */
+}
+
+.manage-products-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333; /* Màu chữ đậm */
+}
+
+.manage-products-container form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.manage-products-container form input,
+.manage-products-container form textarea {
+  width: calc(100% - 20px);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.manage-products-container form input:focus,
+.manage-products-container form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.manage-products-container form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.manage-products-container form button:hover {
+  background-color: #000000;
+}
+
+.manage-products-container .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0; /* Loại bỏ padding để không có dấu chấm */
+}
+
+.manage-products-container .product-list li {
+  list-style: none; /* Loại bỏ dấu chấm bên cạnh sản phẩm */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: calc(25% - 20px); /* 4 sản phẩm mỗi hàng, trừ lề */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.manage-products-container .product-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.manage-products-container .product-list li h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.manage-products-container .product-list li p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.manage-products-container .product-list li button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: background-color 0.3s;
+}
+
+.manage-products-container .product-list li button:hover {
+  background-color: #cc0000;
+}
+
+.manage-products-container .product-list img {
+  width: 100px; /* Đảm bảo tất cả các hình ảnh có cùng chiều rộng */
+  height: 100px; /* Đảm bảo tất cả các hình ảnh có cùng chiều cao */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

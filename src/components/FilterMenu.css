@@ -1,0 +1,132 @@
+.filter-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Căn các phần tử về bên trái */
+  background: linear-gradient(135deg, #000000 25%, #050101 50%, #000000 75%); /* Hiệu ứng nền giống login-container */
+  background-size: 200% 200%;
+  padding: 30px;
+  border-radius: 10px;
+  width: calc(100% - 40px); /* Điều chỉnh độ rộng để không có khoảng trắng */
+  margin: 50px auto; /* Căn giữa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: backgroundMove 3s infinite alternate, fadeIn 0.5s;
+  position: relative; /* Cần thiết để đặt hiệu ứng */
+  overflow: hidden; /* Cần thiết để ẩn phần thừa của hiệu ứng */
+}
+
+.filter-menu h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: left;
+  width: 100%; /* Để tiêu đề căn giữa */
+  color: #f8f2f2; /* Màu chữ */
+}
+
+.filter-menu div {
+  display: flex;
+  justify-content: flex-start; /* Căn các phần tử về bên trái */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.filter-menu label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #fff1f1; /* Màu chữ */
+}
+
+.filter-menu select {
+  width: auto; /* Điều chỉnh độ rộng để phù hợp với nội dung */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff; /* Màu nền trắng của select box */
+  color: #000; /* Màu chữ đen của select box */
+}
+
+.filter-menu button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  align-self: flex-start; /* Căn nút về bên trái */
+  margin-top: 10px; /* Khoảng cách trên cho nút */
+  position: relative; /* Cần thiết để đặt hiệu ứng */
+  overflow: hidden; /* Cần thiết để ẩn phần thừa của hiệu ứng */
+  transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+.filter-menu button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+.filter-menu button:hover .button-sparkle {
+  display: block;
+}
+
+.filter-menu button .button-sparkle {
+  display: none;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: buttonSparkle 1.5s infinite linear;
+}
+
+.filter-menu button .button-sparkle:nth-child(1) {
+  top: 5px;
+  left: 50%;
+  animation-delay: 0s;
+}
+
+.filter-menu button .button-sparkle:nth-child(2) {
+  top: 50%;
+  left: 5px;
+  animation-delay: 0.5s;
+}
+
+.filter-menu button .button-sparkle:nth-child(3) {
+  bottom: 5px;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.filter-menu button .button-sparkle:nth-child(4) {
+  top: 50%;
+  right: 5px;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes buttonSparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Màu nền đen */
+  padding: 15px 20px;
+  color: #fff; /* Màu chữ trắng */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f8f8f8; /* Màu khi rê chuột */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.header-cart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-cart img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

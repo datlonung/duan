@@ -1,0 +1,75 @@
+.order-confirmation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .order-confirmation-container h1 {
+    font-size: 36px;
+    color: #28a745; /* Màu xanh lá cây cho thông báo thành công */
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .order-confirmation-container h1::before {
+    content: '✔'; /* Biểu tượng xác nhận */
+    position: absolute;
+    top: -60px; /* Đặt biểu tượng ở trên cao hơn */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #28a745; /* Màu xanh lá cây cho biểu tượng */
+    animation: confirmation-check 1s ease-in-out; /* Hiệu ứng xuất hiện với độ trễ */
+    animation-delay: 1s;
+  }
+  
+  .order-confirmation-container p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Hiệu ứng xác nhận */
+  @keyframes confirmation-check {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Hiệu ứng fadeIn và fadeOut */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .animate__fadeIn {
+    animation: fadeIn 1s forwards;
+  }
+  
+  .animate__fadeOut {
+    animation: fadeOut 1s forwards;
+  }
+  

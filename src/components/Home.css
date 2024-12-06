@@ -1,0 +1,129 @@
+.home-container {
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px; /* Giảm khoảng cách giữa các sản phẩm */
+  padding: 10px; /* Giảm khoảng cách bên trong thẻ sản phẩm */
+  width: calc(25% - 10px); /* 4 sản phẩm mỗi hàng */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* Chiều cao cố định để các hình ảnh có cùng kích thước */
+  object-fit: cover; /* Cắt ảnh để phù hợp với khung hình mà không thay đổi tỉ lệ */
+  border-radius: 10px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.product-card p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.product-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+.product-card button:hover .button-sparkle {
+  display: block;
+}
+
+.product-card button .button-sparkle {
+  display: none;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(10, 231, 39, 0.8);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: buttonSparkle 1.5s infinite linear;
+}
+
+.product-card button .button-sparkle:nth-child(1) {
+  top: 5px;
+  left: 50%;
+  animation-delay: 0s;
+}
+
+.product-card button .button-sparkle:nth-child(2) {
+  top: 50%;
+  left: 5px;
+  animation-delay: 0.5s;
+}
+
+.product-card button .button-sparkle:nth-child(3) {
+  bottom: 5px;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.product-card button .button-sparkle:nth-child(4) {
+  top: 50%;
+  right: 5px;
+  animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100px) translateY(-100px) rotate(360deg);
+  }
+}
+
+@keyframes buttonSparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

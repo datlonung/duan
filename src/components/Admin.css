@@ -1,0 +1,38 @@
+.admin-container {
+    background-color: #000; /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px); /* Điều chỉnh độ rộng để không có khoảng trắng */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .admin-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .admin-container nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-container nav ul li {
+    margin: 0 15px;
+  }
+  
+  .admin-container nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .admin-container nav ul li a:hover {
+    color: #f8f8f8; /* Màu khi rê chuột */
+  }
+  
